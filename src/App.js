@@ -46,15 +46,15 @@ const App = (props) => {
 //     ]
 //   }
 
-  // switchNameHandler = () => {
-  //   this.setState({
-  //     person : [
-  //       { name : 'Emaan' , age : 23 },
-  //       { name : 'Sahar', age : 24 },
-  //       { name: 'Aymun', age: 7 }
-  //     ]
-  //   })
-  // }
+//   switchNameHandler = () => {
+//     this.setState({
+//       person : [
+//         { name : 'Emaan' , age : 23 },
+//         { name : 'Sahar', age : 24 },
+//         { name: 'Aymun', age: 7 }
+//       ]
+//     })
+//   }
 
 //   render() {
 //     return(
@@ -68,9 +68,9 @@ const App = (props) => {
 //     )
 //   }
 // }
-  // return  React.createElement('div', null, React.createElement('h1', { className: 'App' }, 'Hi... I am a  app!!!'));
-    // <div className="App">
-    //   <h1>Hi I am a react app</h1>
-    // </div>
+//   return  React.createElement('div', null, React.createElement('h1', { className: 'App' }, 'Hi... I am a  app!!!'));
+//     <div className="App">
+//       <h1>Hi I am a react app</h1>
+//     </div>
 
 export default App;
