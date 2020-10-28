@@ -19,6 +19,17 @@ class class_based_implementation extends Component {
       ]
     })
   }
+
+  nameChangedHandler = (event) => {
+    console.log('event', event.target.value);
+    this.setState({
+      person : [
+        { name : event.target.value , age : 23 },
+        { name : 'Sahar', age : 24 },
+        { name: 'Aymun', age: 7 }
+      ]
+    })
+  }
   render() {
     return(
       <div className="App">
@@ -26,10 +37,12 @@ class class_based_implementation extends Component {
         <button onClick = {() => {this.switchNameHandler('Emaan!!!')}}>Switch Name</button> {/* this method is not preferable as this is insufficient at some stage. So, avoid using this syntax */}
         {/* <button onClick = {this.switchNameHandler.bind(this, 'Emaan')}>Switch Name</button> */}
         <Person 
+          changed = {this.nameChangedHandler} 
           name= {this.state.person[0].name} 
           age = {this.state.person[0].age}>
         </Person>
-        <Person click = {this.switchNameHandler.bind(this, 'Maryam')}
+        <Person 
+          click = {this.switchNameHandler.bind(this, 'Maryam')}
           name= {this.state.person[1].name} 
           age = {this.state.person[1].age}>My hobby is Singing
         </Person>

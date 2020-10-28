@@ -7,6 +7,10 @@ return (
         <p>
             {props.children}
         </p>
+        
+        {/* Two Way binding */}
+
+        <input type='text' onChange = {props.changed} value = {props.name}></input>
 
     </div>
 )
