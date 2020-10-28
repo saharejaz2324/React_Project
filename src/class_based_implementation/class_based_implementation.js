@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Person from '../Person/Person';
+import './class_based_implementation.css'
 
 class class_based_implementation extends Component {
   state = {
@@ -31,10 +32,19 @@ class class_based_implementation extends Component {
     })
   }
   render() {
+
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border : '1px solid blue',
+      padding : '8px',
+      cursor : 'pointer'
+    }
+
     return(
       <div className="App">
         <h1>Hi I am an class_based_implementation</h1>
-        <button onClick = {() => {this.switchNameHandler('Emaan!!!')}}>Switch Name</button> {/* this method is not preferable as this is insufficient at some stage. So, avoid using this syntax */}
+        <button style = {style} onClick = {() => {this.switchNameHandler('Emaan!!!')}}>Switch Name</button> {/* this method is not preferable as this is insufficient at some stage. So, avoid using this syntax */}
         {/* <button onClick = {this.switchNameHandler.bind(this, 'Emaan')}>Switch Name</button> */}
         <Person 
           changed = {this.nameChangedHandler} 
