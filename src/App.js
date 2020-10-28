@@ -27,11 +27,20 @@ const App = (props) => {
 
     return (
       <div className="App">
-        <h1>Hi I am an app</h1>
-        <button onClick = {switchNameHandler}>Switch Name</button>
-        <Person name= {personState.person[0].name} age = {personState.person[0].age}></Person>
-        <Person name= {personState.person[1].name} age = {personState.person[1].age}>My hobby is Singing</Person>
-        <Person name= {personState.person[2].name} age = {personState.person[2].age}></Person>
+        <h1>Hi I am an class_based_implementation</h1>
+        <button onClick = {this.switchNameHandler}>Switch Name</button>
+        <Person 
+          name= {this.state.person[0].name} 
+          age = {this.state.person[0].age}>
+        </Person>
+        <Person click = {this.switchNameHandler}
+          name= {this.state.person[1].name} 
+          age = {this.state.person[1].age}>My hobby is Singing
+        </Person>
+        <Person 
+          name= {this.state.person[2].name} 
+          age = {this.state.person[2].age}>
+        </Person>
       </div>
     )
 }
