@@ -1,49 +1,51 @@
-import { render } from '@testing-library/react';
-import React, {useState} from 'react';
+import { render } from "@testing-library/react";
+import React, { useState } from "react";
 // import React , { Component } from 'react';
-import './App.css';
-import Person from './Person/Person';
+import "./App.css";
+import Person from "./Person/Person";
 
 const App = (props) => {
-
-  const [ personState, setPersonState ] = useState({
-    person : [
-      { name : 'sana' , age : 23 },
-      { name : 'Sahar', age : 24 },
-      { name: 'Aymun', age: 17 }
+  const [personState, setPersonState] = useState({
+    person: [
+      { name: "sana", age: 23 },
+      { name: "Sahar", age: 24 },
+      { name: "Aymun", age: 17 },
     ],
-    otherState: 'Manage Some other state'
+    otherState: "Manage Some other state",
   });
 
   const switchNameHandler = () => {
     setPersonState({
-      person : [
-        { name : 'Emaan' , age : 23 },
-        { name : 'Sahar', age : 24 },
-        { name: 'Aymun', age: 7 }
-      ]
-    })
-  }
+      person: [
+        { name: "Emaan", age: 23 },
+        { name: "Sahar", age: 24 },
+        { name: "Aymun", age: 7 },
+      ],
+    });
+  };
 
-    return (
-      <div className="App">
-        <h1>Hi I am an class_based_implementation</h1>
-        <button onClick = {this.switchNameHandler}>Switch Name</button>
-        <Person 
-          name= {this.state.person[0].name} 
-          age = {this.state.person[0].age}>
-        </Person>
-        <Person click = {this.switchNameHandler}
-          name= {this.state.person[1].name} 
-          age = {this.state.person[1].age}>My hobby is Singing
-        </Person>
-        <Person 
-          name= {this.state.person[2].name} 
-          age = {this.state.person[2].age}>
-        </Person>
-      </div>
-    )
-}
+  return (
+    <div className="App">
+      <h1>Hi I am an class_based_implementation</h1>
+      <button onClick={this.switchNameHandler}>Switch Name</button>
+      <Person
+        name={this.state.person[0].name}
+        age={this.state.person[0].age}
+      ></Person>
+      <Person
+        click={this.switchNameHandler}
+        name={this.state.person[1].name}
+        age={this.state.person[1].age}
+      >
+        My hobby is Singing
+      </Person>
+      <Person
+        name={this.state.person[2].name}
+        age={this.state.person[2].age}
+      ></Person>
+    </div>
+  );
+};
 
 // class App extends Component {
 //   state = {

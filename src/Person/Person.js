@@ -11,7 +11,7 @@ return (
         
         {/* Two Way binding */}
 
-        <input type='text' onChange = {props.changed} value = {props.name}></input>
+        <input type='text' onChange = {props.changed} ></input>
 
     </div>
 )
